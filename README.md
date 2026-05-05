@@ -73,7 +73,7 @@ To run the tests:
 git clone https://github.com/Tek-Planet/cinema-ticket-javascript.git
 
 # Step 2: Navigate to the project diectory.
-cd cinema_ticket_javascript
+cd cinema-ticket-javascript
 
 # Step 3: Install the necessary dependencies.
 npm install
