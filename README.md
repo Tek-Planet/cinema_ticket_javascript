@@ -70,7 +70,7 @@ To run the tests:
 
 ```sh
 # Step 1: Clone the repository 
-git clone https://github.com/Tek-Planet/cinema_ticket_javascript.git
+git clone https://github.com/Tek-Planet/cinema-ticket-javascript.git
 
 # Step 2: Navigate to the project diectory.
 cd cinema_ticket_javascript
