@@ -46,7 +46,7 @@ export default class TicketService {
 
       // ensure no negative ticket number is entered
       if(ticket.getNoOfTickets() <= 0){
-        throw new InvalidPurchaseException ('Ticket count must be a positive value');
+        throw new InvalidPurchaseException ('Ticket count must be a positive value')
       }
     }   
   }
@@ -59,20 +59,20 @@ export default class TicketService {
       const ticketType = ticket.getTicketType();
       const ticketNumber =  ticket.getNoOfTickets()
 
-      if (ticketType === 'ADDULT') adultTicket += ticketNumber
+      if (ticketType === 'ADULT') adultTicket += ticketNumber
       if (ticketType === 'CHILD') childTicket += ticketNumber
       if (ticketType === 'INFANT') infantTicket += ticketNumber
 
     }
 
     const totalTicket = adultTicket + childTicket + infantTicket
-    // ensures total ticket does not eceed 25
+    // ensures total ticket does not exceed 25
     if(totalTicket > 25){
       throw new InvalidPurchaseException ('Cannot purchase more than 25 tickets')
     }
   // ensures adult tiket is included in the purchase 
     if(adultTicket === 0 && (childTicket>0 || infantTicket>0) ){
-      throw new InvalidPurchaseException ('A child or infat must be accompanied by an adult')
+      throw new InvalidPurchaseException ('A child or infant must be accompanied by an adult')
     }
 
     // compute total amount
